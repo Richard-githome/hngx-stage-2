@@ -8,7 +8,7 @@ const apiData = {
     current_day: currentDay,
     utc_time: currentUTC,
     track: "backend",
-    github_file_url: "https://github.com/Richard-githome/hngx-stage1/tree/main/src",
+    github_file_url: "https://github.com/Richard-githome/hngx-stage1/blob/main/src/server.js",
     github_repo_url: "https://github.com/Richard-githome/hngx-stage1",
     status_code: +"",
 };
