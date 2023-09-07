@@ -1,9 +1,12 @@
 const dotenv = require('dotenv').config();
 
+const currentDay = new Date().toLocaleString('en-US', { weekday: 'long' });
+const currentUTC = new Date().toISOString().slice(0, 19) + 'Z';
+
 const apiData = {
     slack_name: "",
-    current_day: new Date().toLocaleString('en-US', { weekday: 'long' }),
-    utc_time: new Date().toISOString().slice(0, 19) + 'Z',
+    current_day: currentDay,
+    utc_time: currentUTC,
     track: "backend",
     github_file_url: "https://github.com/Richard-githome/hngx-stage1/tree/main/src",
     github_repo_url: "https://github.com/Richard-githome/hngx-stage1",
