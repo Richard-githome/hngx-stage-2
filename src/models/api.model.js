@@ -1,8 +1,9 @@
 const dotenv = require('dotenv').config();
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const currentDay = days[new Date().getDay()];
-const utcTime = new Date().toISOString().slice(0, 19) + "Z";
+const today = new Date();
+const currentDay = days[today.getDay()];
+const utcTime = today.toISOString().slice(0, 19) + "Z";
 
 const apiData = {
     slack_name: "",
