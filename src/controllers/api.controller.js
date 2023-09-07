@@ -1,9 +1,9 @@
-import apiData from "../models/api.model";
+const {getApiData} = require("../models/api.model");
 
 function httpGetApiData(req, res){
-        res.status(200).json({
-            
-        });
-    }
+    const { slack_name, track} = req.query;
+    const retrivedData = getApiData(slack_name, track);
+    res.json(retrivedData).status(200);
+}
 
-export { httpGetApiData };
+module.exports = {httpGetApiData};

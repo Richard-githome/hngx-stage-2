@@ -1,8 +1,6 @@
-import dotenv from "dotenv";
-dotenv.config();
-import http from "node:http";
-import app from './app';
-
+const dotenv = require('dotenv').config();
+const http = require("http");
+const app = require("./app");
 const server = http.createServer(app);
 
 

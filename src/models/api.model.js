@@ -1,13 +1,26 @@
+const dotenv = require('dotenv').config();
+
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const apiData = {
-    slack_name: "hngx-stage1",
+    slack_name: "",
     current_day: days[new Date().getDay()],
     utc_time: new Date().toISOString(),
     track: "backend",
-    github_file_url: GITHUB_RUNNING_FILE_URL,
-    github_repo_url: GITHUB_REPO_URL,
-    status_code: 200,
+    github_file_url: "https://github.com/Richard-githome/hngx-stage1/tree/main/src",
+    github_repo_url: "https://github.com/Richard-githome/hngx-stage1",
+    status_code: +"",
 };
 
-export default apiData;
+function getApiData (slack_name, track){
+    if (slack_name && track){
+        apiData.slack_name = slack_name;
+        apiData.track = track;
+        apiData.status_code = 200;
+    } else if(!slack_name && !track) {
+        throw new Error("Invalid query parameters");
+    }
+    return apiData;
+}
+
+module.exports = {getApiData};
