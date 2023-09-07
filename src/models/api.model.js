@@ -1,11 +1,9 @@
 const dotenv = require('dotenv').config();
 
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
 const apiData = {
     slack_name: "",
-    current_day: days[new Date().getDay()],
-    utc_time: new Date().toISOString(),
+    current_day: new Date().toLocaleString('en-US', { weekday: 'long' }),
+    utc_time: new Date().toISOString().slice(0, 19) + 'Z',
     track: "backend",
     github_file_url: "https://github.com/Richard-githome/hngx-stage1/tree/main/src",
     github_repo_url: "https://github.com/Richard-githome/hngx-stage1",
