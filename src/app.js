@@ -1,12 +1,31 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
-const {getRouter} = require("./routes/api.router");
-
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const { personRouter } = require("./routes/person.router");
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', getRouter);
+app.use((req, res, next) => {
+  try {
+    if (
+      req.method === "GET" ||
+      req.method === "POST" ||
+      req.method === "PATCH" ||
+      req.method === "DELETE"
+    ) {
+      next();
+    } else {
+      throw new Error("Method not allowed");
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(405).json({ message: error.message });
+  }
+});
+
+app.use("/api", personRouter);
 
 module.exports = app;
