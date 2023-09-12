@@ -1,7 +1,7 @@
 {
-  "name": "hngx-stage1",
+  "name": "hngx-stage-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "HNGX Internship stage 2",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
