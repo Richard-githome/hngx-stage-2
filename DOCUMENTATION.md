@@ -73,3 +73,11 @@ In case of any errors or invalid requests, the API will respond with appropriate
 - **400 Bad Request**: Indicates that the request is malformed or missing required fields. The response body will contain an error message describing the issue.
 
 - **404 Not Found**: Indicates that the requested resource does not exist. The response body will contain an error message indicating the resource was not found.
+
+# UML Snippet
+
+<div align="center">
+<img src="./UML-Diagram.png" alt="UML Diagram"/>
+</div>
+
+![RESTful API UML](./UML-Diagram.png)

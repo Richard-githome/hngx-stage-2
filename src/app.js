@@ -21,7 +21,7 @@ app.use((req, res, next) => {
       throw new Error("Method not allowed");
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(405).json({ message: error.message });
   }
 });
