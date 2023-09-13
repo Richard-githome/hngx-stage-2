@@ -11,6 +11,7 @@ This is the stage two task for the HNGX program. Wish me well, thanks.
     <li>Installation</li>
     <li>Usage</li>
     <li>API Documentation</li>
+    <li>UML Diagram</li>
 </ol>
 
 # Objective:
@@ -74,3 +75,9 @@ The following endpoints are available:
 - `POST /api` : Saves a person object to the database.
 - `PATCH /api/:user_id` : Updates a person object in the database.
 - `DELETE /api/:user_id` : Deletes a person object from the database.
+
+## UML Diagram
+
+<div align="center">
+<img src="./src/utils/images/UML-Diagram.png" alt="UML Diagram"/>
+</div>

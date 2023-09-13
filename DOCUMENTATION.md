@@ -1,4 +1,14 @@
-# API Documentation: CRUD RESTful API
+## API Documentation: CRUD RESTful API
+
+## Table of Contents
+
+<ol>
+    <li>Overview</li>
+    <li>Base URL</li>
+    <li>Resource</li>
+    <li>Error Handling</li>
+    <li>UML Diagram</li>
+</ol>
 
 ## Overview
 This API provides Create, Read, Update, and Delete (CRUD) functionality for managing a person resource. It follows the REST architectural style and is built using Node.js.
@@ -70,14 +80,14 @@ The base URL for all API endpoints is: `https://localhost:3000/api`
 
 In case of any errors or invalid requests, the API will respond with appropriate error messages and status codes.
 
-- **400 Bad Request**: Indicates that the request is malformed or missing required fields. The response body will contain an error message describing the issue.
+- **400 Bad Request**: Indicates that the request is missing required fields. The response body will contain an error message describing the issue.
 
 - **404 Not Found**: Indicates that the requested resource does not exist. The response body will contain an error message indicating the resource was not found.
 
-# UML Snippet
+- **500 Internal Server**: Indicates that there is a server internal error while handling the request. The response body will contain an error message indicating that there is an internal server error.
+
+## UML Diagram
 
 <div align="center">
-<img src="./UML-Diagram.png" alt="UML Diagram"/>
+<img src="./src/utils/images/UML-Diagram.png" alt="UML Diagram"/>
 </div>
-
-![RESTful API UML](./UML-Diagram.png)

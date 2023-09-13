@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
-  serialNum: {
+  id: {
     type: Number,
+    required: true
   },
   name: {
     type: String,
@@ -11,4 +12,4 @@ const personSchema = new mongoose.Schema({
 });
 
 // Connects personSchema with the "launches" collection
-module.exports = mongoose.model("Person", personSchema);
+module.exports = mongoose.model('Person', personSchema);
