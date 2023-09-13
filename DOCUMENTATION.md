@@ -40,7 +40,7 @@ The base URL for all API endpoints is: `https://localhost:3000/api`
    - Description: Retrieve a user by ID (serialNumber).
    - Parameters:
      - Path Params:
-       - user_id (string || number): The ID (serialNumber) of the user to retrieve.
+       - user_id (string || number): The ID of the user to retrieve.
    - Response:
      - Status: 200 OK
      - Body: Person Object
@@ -56,10 +56,10 @@ The base URL for all API endpoints is: `https://localhost:3000/api`
      - Status: 400 Bad Request (if required fields are missing or invalid)
 
 4. **PATCH /api/{user_id}
-   - Description: Update a person by ID (serialNumber).
+   - Description: Update a person by ID.
    - Parameters:
      - Path Params:
-       - user_id (number): The ID (serialNumber) of the user to update.
+       - user_id (number): The ID of the user to update.
    - Request:
      - Body: Person Object (name is required)
    - Response:
@@ -69,10 +69,10 @@ The base URL for all API endpoints is: `https://localhost:3000/api`
      - Status: 404 Not Found (if user not found)
 
 5. **DELETE /api/{user_id}
-   - Description: Delete a user by ID (serialNumber).
+   - Description: Delete a user by ID.
    - Parameters:
      - Path Params:
-       - user_id (number): The ID (serialNumber) of the user to delete.
+       - user_id (number): The ID of the user to delete.
    - Response:
      - Status: 404 Not Found (if user not found)
 
