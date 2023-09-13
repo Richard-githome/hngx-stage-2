@@ -5,7 +5,7 @@ const { connection, connect } = require('mongoose');
 const MONGO_URL = process.env.MONGO_URL
 
 connection.once('open', () => {
-  // console.log('MongoDB connection ready!');
+  console.log('MongoDB connection ready!');
 });
 
 connection.on('error', (err) => {
