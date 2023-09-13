@@ -11,7 +11,7 @@ const {
 async function httpGetPersonData(req, res) {
   const persons = await getPersonData();
   if(persons.length === 0) {
-    return res.status(404).json({ Message: "No persons found" });
+    return res.status(404).json({ Message: "No persons found. Add a person object using a form element or Postman body." });
   } else if (persons.error) {
     return res.status(500).json({ Error: "Internal server error" });
   }
